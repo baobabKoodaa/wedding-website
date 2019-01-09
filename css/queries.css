@@ -18,7 +18,7 @@
 }
 
 /* Responsive nav kicks in */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 996px) {
     header {
         width: 90%;
         padding-left: 25px;
@@ -191,6 +191,22 @@
         margin: 0;
     }
 
+    .hero-strip {
+        margin-top: 0;
+    }
+
+    .events .leftcol {
+        padding: 0 15px;
+        margin-bottom: 15px;
+        border-right: none;
+    }
+
+    .events .rightcol {
+        padding: 0 20px;
+    }
+
+/* Eng pics? */
+
     .features {
         padding-bottom: 0;
     }
@@ -212,23 +228,11 @@
         width: 100%;
     }
 
-    .hero-strip {
-        margin-top: 0;
-    }
-
-    .events .leftcol {
-        padding: 0 15px;
-        margin-bottom: 15px;
-        border-right: none;
-    }
-
-    .events .rightcol {
-        padding: 0 20px;
-    }
-    
     #eng-pics .img-wrap {
         border-radius: 0;
     }
+
+/* Eng pics? */
 
     #map-content-wrapper {
         margin-bottom: 40px;
@@ -256,6 +260,8 @@
     .hero .hero-content {
         /*padding-top: 100%;*/
     }
+
+    
 
     #eng-pics .img-wrap i {
         font-size: 25px;
