@@ -649,7 +649,13 @@ Instagram
 /* ==========================================================================
 Engagement Pics
 ========================================================================== */
+span.fa-heart {
+    color: #ff415c;
+    font-size: 18px;
+    margin: 0 2px;
+}
 #eng-pics {
+  
   img {
     width: 100%;
     height: auto;
@@ -875,11 +881,6 @@ footer {
   }
   .to-top-wrapper .to-top:hover {
     margin-top: -5px;
-  }
-  span.fa-heart {
-    color: #ff415c;
-    font-size: 18px;
-    margin: 0 2px;
   }
 }
 
