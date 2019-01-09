@@ -246,13 +246,57 @@ Navigation
   visibility: hidden;
   transition: all 300ms ease-in-out;
 }
+.navigation {
+  transition: all 300ms ease-in-out;
+  position: fixed;
+  /*background-color: rgba(55, 36, 40, .88);*/
+  width: 100%;
+  z-index: 999;
+}
+.fixed {
+  position: fixed;
+  background-color: rgba(55, 36, 40, .88);
+  z-index: 999;
+  width: 100%;
+}
 
 /* ==========================================================================
 Hero
 ========================================================================== */
+
+section h2:decor-up, section h2:decor-down {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #f8f9fd;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1em;
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+:decor-up, :decor-down {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.splash {
+    top: 72vh;
+}
+
+
 .hero {
-  min-height: 750px;
+  height: 100vh;
+  /*min-height: 750px;*/
   background: url('../img/hero-min.jpg') center center;
+  /*background-color: #f8f9fd;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -265,7 +309,7 @@ Hero
     left: 50%;
   }*/
   .down-arrow a {
-    color: $txt-light;
+    color: gray;
   }
   h1 {
     color: $txt-light;
@@ -278,25 +322,15 @@ Hero
     margin-bottom: 80px;
   }
   .hero-content {
-    padding-top: 40%;
+    padding-top: 0%;
+    /*padding-top: 40%;*/
   }
   .hero-content img {
-    width: 55%;
-    margin-bottom: 12%;
+    /*width: 55%;*/
+    /*margin-bottom: 12%;*/
   }
 }
-.navigation {
-  transition: all 300ms ease-in-out;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-}
-.fixed {
-  position: fixed;
-  background-color: rgba(55, 36, 40, .88);
-  z-index: 999;
-  width: 100%;
-}
+
 header {
   padding: 50px 0;
   border-bottom: solid 1px rgba(255, 255, 255, 0.2);
@@ -365,9 +399,9 @@ header {
 }
 .down-arrow {
   color: #fff;
-  font-size: 30px;
+  font-size: 7vh;
   position: absolute;
-  bottom: 30px;
+  bottom: 7vh;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -649,7 +683,13 @@ Instagram
 /* ==========================================================================
 Engagement Pics
 ========================================================================== */
+span.fa-heart {
+    color: #ff415c;
+    font-size: 18px;
+    margin: 0 2px;
+}
 #eng-pics {
+  
   img {
     width: 100%;
     height: auto;
@@ -876,11 +916,6 @@ footer {
   .to-top-wrapper .to-top:hover {
     margin-top: -5px;
   }
-  span.fa-heart {
-    color: #ff415c;
-    font-size: 18px;
-    margin: 0 2px;
-  }
 }
 
 /* ==========================================================================
@@ -891,4 +926,39 @@ body.modal-open {
 }
 .modal-body {
   padding:25px;
+}
+
+/* ==========================================================================
+Tooltip
+========================================================================== */
+.tooltip-trigger {
+  display: inline-block;
+  position: relative;
+  color: #d3b56a;
+}
+.tooltip-definition { 
+  display: none;
+}
+.tooltip-trigger:hover > .tooltip-definition {
+  display: inline-block;
+  position: absolute;
+  bottom: 100%;
+  left: calc(50%);
+  transform: translateX(-50%);
+  padding: 5px;
+  border: 1px solid #d3b56a;
+  white-space: nowrap;
+  color: rgba(28,54,83,0.6);
+  background-color: #f8f9fd;
+  text-align: left;
+}
+
+/* ==========================================================================
+Mobile-friendly line breaks
+========================================================================== */
+@media screen and (max-width: 768px){
+    .desktop-break { display: none; }
+}
+@media screen and (min-width: 769px){
+    .mobile-break { display: none; }
 }
