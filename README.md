@@ -23,7 +23,6 @@ Majority of the design and functionality should be credited to him.
 
 Here is a list of changes:
 1. Changed Google Map embedding so that it doesn't require API access, Google Cloud Platform account and an attached credit card. Unlimited free usage now.
-2. Changed scaling of top image so that it fills the entire screen (slightly overfills the height on mobile for some reason).
-3. Removed embedded video, uber button, social media trackers
-4. Our own content, photos, etc. Minor design changes, like mobile friendly line breaks, added tooltip, etc.
+2. Removed embedded video, uber button and social media trackers
+3. Our own content, photos, etc. Minor design changes, like splash screen, mobile friendly line breaks, added tooltip, etc.
 

@@ -294,14 +294,21 @@ section h2:decor-up, section h2:decor-down {
 
 .hero {
   height: 100vh;
-  /*min-height: 750px;*/
-  background: url('../img/hero-min.jpg') center center;
-  /*background-color: #f8f9fd;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+
+  .bgplaceholder {
+      height: 100vh;
+      background: url('../img/hero-placeholder.svg') center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      position: relative;
+  }
 
   /*.rsvp-btn {
     position: absolute;
@@ -402,6 +409,12 @@ header {
   font-size: 7vh;
   position: absolute;
   bottom: 7vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo-test-overlay {
+  position: absolute;
+  bottom: 20vh;
   left: 50%;
   transform: translateX(-50%);
 }
