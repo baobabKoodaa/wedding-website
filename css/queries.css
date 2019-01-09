@@ -300,6 +300,13 @@
         /*width: 65%;*/
     }
 
+    /*
+    .splash {
+	top: 37vh;
+    }
+    */
+
+
     .hero .btn {
         display: block;
         width: 80%;
@@ -307,7 +314,7 @@
     }
 
     .hero .btn:first-of-type {
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
     }
 
     .hero h1 {
