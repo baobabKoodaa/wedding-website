@@ -184,26 +184,45 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('.alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        if ($('#robot_check').val() !== '2019') {
+            $('.alert-wrapper').html(alert_markup('danger', '<strong>Pahoittelut!</strong> Robottitarkistuksen mielestä et ole ihminen. Voit myös ilmoittautua puhelimella.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+            $.post('https://', data)
                 .done(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html('');
+                    $('.alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                    $('.alert-wrapper').html(alert_markup('danger', '<strong>Pahus!</strong> Jokin meni mönkään. Tarkista toimiiko netti. Jos virhe toistuu, voit ilmoittautua puhelimella.'));
                 });
         }
     });
 
 });
+
+function showRSVPYesTree() {
+    $("#rsvp-root").hide();
+    $("#rsvp-yes").show();
+    $("#rsvp-end").show();
+    /* TODO: focus on next field */
+
+    /* Scroll.
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#rsvp-yes").offset().top
+    }, 2000); */
+}
+
+function showRSVPNoTree() {
+    $("#rsvp-root").hide();
+    $("#rsvp-no").show();
+    $("#rsvp-submit").text('En valitettavasti pääse paikalle');
+    $("#rsvp-submit").css({ "background-color": '#F0F0F0' , "border-color": '#F0F0F0' , 'color':'rgba(28,54,83,0.6)'});
+    $("#rsvp-end").show();
+}
 
 /********************** Extras **********************/
 
