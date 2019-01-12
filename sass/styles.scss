@@ -841,6 +841,7 @@ RSVP form
       width: 100%;
       font-size: 13px;
     }
+
     .form-input-checkbox-container {
       width: 100%;
       height: 55px;
@@ -848,11 +849,23 @@ RSVP form
       text-align: left;
       position: relative;
     }
+    .form-input-checkbox-container:hover input ~ .form-input-checkbox {
+      background-color: #e8ca6f;
+      border-color: #e8ca6f;
+    }
+    .form-input-checkbox-container input:checked ~ .form-input-checkbox {
+      background-color: $accent-color-hover;
+    }
     .form-input-checkbox {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       margin-left: 20px;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+      border: 0px;
+      i:after { width: 0px; }
     }
     .form-input-checkbox-text {
 	padding-left: 68px;
@@ -915,18 +928,13 @@ RSVP form
         color: $form-placeholder;
       }
     }
-    .form-input-checkbox {
-      -moz-border-radius: 0px;
-      -webkit-border-radius: 0px;
-      border-radius: 0px;
-      border: 0px;
-      i:after { width: 0px; }
-    }
   }
 }
 
 
 /* Checkbox styling */
+
+
 input[type=checkbox] {
 display:none;
 }
@@ -948,7 +956,6 @@ width: 16px;
 display:inline-block;
 padding: 0 0 0 0px;
 }
-
 
 /* ==========================================================================
 Footer

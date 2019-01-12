@@ -424,7 +424,7 @@
 					    <div class="form-input-group">
 					        <i class="fa fa-user"></i>
 						<input name="decline-name" class=""
-					                                         placeholder="Nimi"
+					                                         placeholder="Nimi*"
 					                                         >
 					    </div>
 					</div>
@@ -446,7 +446,7 @@
 				        <div class="col-xs-12">
 				            <div class="form-input-group">
 				                <i class="fa fa-user"></i><input name="name1" class=""
-				                                                 placeholder="Nimi"
+				                                                 placeholder="Nimi*"
 				                                                 >
 				            </div>
 				        </div>
@@ -455,7 +455,7 @@
 				        <div class="col-xs-12">
 				            <div class="form-input-group">
 				                <i class="fa fa-envelope"></i><input type="email" name="email1" class=""
-				                                                     placeholder="Sähköposti"
+				                                                     placeholder="Sähköposti (kuvia häiden jälkeen)"
 				                                                     >
 				            </div>
 				        </div>
@@ -472,10 +472,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="form-input-checkbox-container">
-							<input name="whatsapp1" type="checkbox" value="whatsapp1" id="whatsapp1" checked="checked" style="">
+							<input name="whatsapp1" type="checkbox" value="whatsapp1" id="whatsapp1" style="">
 							<label class="form-input-checkbox" for="whatsapp1">
+								<span class="checkmark"></span>
 								<span style="width: 80vw; position: absolute; padding-left: 48px; font-weight: 300 !important; color: rgba(28,54,83,0.6);">
-									Haluan hääpäivänä WhatsApp-ryhmään
+									Saa liittää hääpäivänä WhatsApp-ryhmään
 								</span>
 							</label>	
 						</div>
@@ -500,7 +501,7 @@
 						<div class="col-xs-12">
 						    <div class="form-input-group">
 						        <i class="fa fa-user"></i><input name="name2" class=""
-						                                         placeholder="Nimi"
+						                                         placeholder="Nimi*"
 						                                         >
 						    </div>
 						</div>
@@ -509,7 +510,7 @@
 						<div class="col-xs-12">
 						    <div class="form-input-group">
 						        <i class="fa fa-envelope"></i><input type="email" name="email2" class=""
-						                                             placeholder="Sähköposti"
+						                                             placeholder="Sähköposti (kuvia häiden jälkeen)"
 						                                             >
 						    </div>
 						</div>
@@ -526,10 +527,11 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="form-input-checkbox-container">
-								<input name="whatsapp2" type="checkbox" value="whatsapp2" id="whatsapp2" checked="checked" style="">
+								<input name="whatsapp2" type="checkbox" value="whatsapp2" id="whatsapp2" style="">
 								<label class="form-input-checkbox" for="whatsapp2">
+									<span class="checkmark"></span>
 									<span style="width: 80vw; position: absolute; padding-left: 48px; font-weight: 300 !important; color: rgba(28,54,83,0.6);">
-										Haluan hääpäivänä WhatsApp-ryhmään
+										Saa liittää hääpäivänä WhatsApp-ryhmään
 									</span>
 								</label>	
 							</div>
@@ -551,7 +553,7 @@
 					<div class="row">
 						<div class="col-xs-12">
 						    <div class="form-input-group">
-						        <i class="fa fa-child"></i><input name="child-name1" class="" placeholder="Nimi">
+						        <i class="fa fa-child"></i><input name="child-name1" class="" placeholder="Nimi*">
 						    </div>
 						</div>
 					</div>
@@ -577,7 +579,7 @@
 					<div class="row">
 						<div class="col-xs-12">
 						    <div class="form-input-group">
-						        <i class="fa fa-child"></i><input name="child-name2" class="" placeholder="Nimi">
+						        <i class="fa fa-child"></i><input name="child-name2" class="" placeholder="Nimi*">
 						    </div>
 						</div>
 					</div>
@@ -603,7 +605,7 @@
 					<div class="row">
 						<div class="col-xs-12">
 						    <div class="form-input-group">
-						        <i class="fa fa-child"></i><input name="child-name3" class="" placeholder="Nimi">
+						        <i class="fa fa-child"></i><input name="child-name3" class="" placeholder="Nimi*">
 						    </div>
 						</div>
 					</div>
@@ -629,7 +631,7 @@
 
 			
 			<div id="rsvp-end" style="display: none">
-				<div class="row">
+				<div class="row" id="rsvp-wishes-row">
 					<div class="col-xs-12">
 						<div class="form-input-group">
 							<i class="fa fa-list"></i>
