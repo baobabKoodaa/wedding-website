@@ -850,8 +850,7 @@ RSVP form
       position: relative;
     }
     .form-input-checkbox-container:hover input ~ .form-input-checkbox {
-      background-color: #e8ca6f;
-      border-color: #e8ca6f;
+      background-color: #f5e9c5;
     }
     .form-input-checkbox-container input:checked ~ .form-input-checkbox {
       background-color: $accent-color-hover;
@@ -950,7 +949,6 @@ outline: 1px solid #e8ca6f;
 }
 input[type=checkbox]:checked + label
 {
-background: #e8ca6f;
 height: 16px;
 width: 16px;
 display:inline-block;
