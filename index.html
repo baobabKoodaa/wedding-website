@@ -110,7 +110,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3>Naimisiin!</h3>
-                <p>Tervetuloa mukaan juhlistamaan häitämme <b>11.5.2019</b>.
+                <p>Tervetuloa juhlistamaan iloista päivää <b>11.5.2019</b>.
 		   <br class="desktop-break">Siunaustilaisuus on klo <b>14:00</b> Helsingin Vanhalla kirkolla (Lönnrotinkatu 6).
 		   <br class="desktop-break">Jatkamme siitä viettämään hääjuhlaa Kulosaaren Casinolle (Hopeasalmenpolku 1).
 		   <br class="desktop-break">
@@ -399,55 +399,274 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Ilmoittautuminen</h3>
-                <p>Pyytäisimme teitä ystävällisesti vastaamaan kutsuun XX.YY mennessä. Häät ovat 11.5.2019. Huomioittehan että kutsu on tarkoitettu vain kirjeessä osoitetuille henkilöille.</p>
+                <p>Vastaattehan kutsuun viimeistään XX.YY.<br class="desktop-break">Kutsu on tarkoitettu vain kirjeessä osoitetuille henkilöille.</p>
+
+
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
+
+			<div id="rsvp-root">
+				<button class="btn-fill rsvp-btn" type="button" onclick="showRSVPYesTree()">
+					Haluan ilmoittautua mukaan
+				</button>
+				<br><br>
+				<button class="btn-fill rsvp-btn" type="button" onclick="showRSVPNoTree()" style="background-color: #F0F0F0; border-color: #F0F0F0; color:rgba(28,54,83,0.6);">
+					Joudun kieltäytymään kutsusta
+				</button>
+				
+			</div>
+
+			<div id="rsvp-no" class="rsvp-no" style="display: none">
+
+				<div class="row">
+					<div class="col-xs-12">
+					    <div class="form-input-group">
+					        <i class="fa fa-user"></i>
+						<input name="decline-name" class=""
+					                                         placeholder="Nimi"
+					                                         >
+					    </div>
+					</div>
+				</div>
+
+			</div>
+
+		    	<div id="rsvp-yes" class="rsvp-yes" style="display: none">
+
+
+
+
+
+
+
+
+
+				<div class="row">
+				        <div class="col-xs-12">
+				            <div class="form-input-group">
+				                <i class="fa fa-user"></i><input name="name1" class=""
+				                                                 placeholder="Nimi"
+				                                                 >
+				            </div>
+				        </div>
+				</div>
+				<div class="row">
+				        <div class="col-xs-12">
+				            <div class="form-input-group">
+				                <i class="fa fa-envelope"></i><input type="email" name="email1" class=""
+				                                                     placeholder="Sähköposti"
+				                                                     >
+				            </div>
+				        </div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+				            <div class="form-input-group">
+				                <i class="fa fa-phone"></i><input name="phone1" class=""
+				                                                     placeholder="Puhelinnumero"
+				                                                     >
+				            </div>
+				        </div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="form-input-checkbox-container">
+							<input name="whatsapp1" type="checkbox" value="whatsapp1" id="whatsapp1" checked="checked" style="">
+							<label class="form-input-checkbox" for="whatsapp1">
+								<span style="width: 80vw; position: absolute; padding-left: 48px; font-weight: 300 !important; color: rgba(28,54,83,0.6);">
+									Haluan hääpäivänä WhatsApp-ryhmään
+								</span>
+							</label>	
+						</div>
+				        </div>
+				</div>
+				<div class="row section-border" style="margin-bottom: 30px">
+				</div>
+
+
+
+				<div id="rsvp-show-adult2">
+					<button class="btn-fill rsvp-btn" type="button" onclick="showAdult2Inputs()" style="width: 50%; margin-bottom: 30px">
+						Lisää toinen aikuinen
+					</button>
+					<div class="row section-border" style="margin-bottom: 30px"></div>
+				</div>
+
+
+
+				<div id="rsvp-adult2-inputs" style="display: none">
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+						        <i class="fa fa-user"></i><input name="name2" class=""
+						                                         placeholder="Nimi"
+						                                         >
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+						        <i class="fa fa-envelope"></i><input type="email" name="email2" class=""
+						                                             placeholder="Sähköposti"
+						                                             >
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+						        <i class="fa fa-phone"></i><input name="phone2" class=""
+						                                             placeholder="Puhelinnumero"
+						                                             >
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="form-input-checkbox-container">
+								<input name="whatsapp2" type="checkbox" value="whatsapp2" id="whatsapp2" checked="checked" style="">
+								<label class="form-input-checkbox" for="whatsapp2">
+									<span style="width: 80vw; position: absolute; padding-left: 48px; font-weight: 300 !important; color: rgba(28,54,83,0.6);">
+										Haluan hääpäivänä WhatsApp-ryhmään
+									</span>
+								</label>	
+							</div>
+						</div>
+					</div>
+					<div class="row section-border" style="margin-bottom: 30px"></div>
+				</div>
+
+				
+
+				<div id="rsvp-show-child1">
+					<button class="btn-fill rsvp-btn" type="button" onclick="showChild1Inputs()" style="width: 50%; margin-bottom: 30px">
+						Lisää lapsi
+					</button>
+					<div class="row section-border" style="margin-bottom: 30px"></div>
+				</div>
+
+				<div id="rsvp-child1-inputs" style="display: none">
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+						        <i class="fa fa-child"></i><input name="child-name1" class="" placeholder="Nimi">
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+							<i class="fa fa-clock-o"></i><input name="child-age1" class="" type="number" placeholder="Ikä">
+						    </div>
+						</div>
+					</div>
+					<div class="row section-border" style="margin-bottom: 30px; margin-top: 20px;"></div>
+					<div id="rsvp-show-child2">
+						<button class="btn-fill rsvp-btn" type="button" onclick="showChild2Inputs()" style="width: 50%; margin-bottom: 30px">
+						Lisää toinen lapsi
+						</button>
+						<div class="row section-border" style="margin-bottom: 30px"></div>
+					</div>
+				</div>
+
+				
+
+				<div id="rsvp-child2-inputs" style="display: none">
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+						        <i class="fa fa-child"></i><input name="child-name2" class="" placeholder="Nimi">
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+							<i class="fa fa-clock-o"></i><input name="child-age2" class="" type="number" placeholder="Ikä">
+						    </div>
+						</div>
+					</div>
+					<div class="row section-border" style="margin-bottom: 30px; margin-top: 20px;"></div>
+					<div id="rsvp-show-child3">
+						<button class="btn-fill rsvp-btn" type="button" onclick="showChild3Inputs()" style="width: 50%; margin-bottom: 30px">
+						Lisää kolmas lapsi
+						</button>
+						<div class="row section-border" style="margin-bottom: 30px"></div>
+					</div>
+				</div>
+
+
+
+				<div id="rsvp-child3-inputs" style="display: none">
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+						        <i class="fa fa-child"></i><input name="child-name3" class="" placeholder="Nimi">
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+						    <div class="form-input-group">
+							<i class="fa fa-clock-o"></i><input name="child-age3" class="" type="number" placeholder="Ikä">
+						    </div>
+						</div>
+					</div>
+					<div class="row section-border" style="margin-bottom: 30px; margin-top: 20px;"></div>
+				</div>
+
+
+
+				
+
+
+					
+
+
+			</div>
+
+			
+			<div id="rsvp-end" style="display: none">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="form-input-group">
+							<i class="fa fa-list"></i>
+							<input name="toiveet" id="toiveet"
+				                                        class=""
+				                                        placeholder="Toiveet (erityisruokavalio, syöttötuoli, tms.)"
+				                                        >
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+				    		<div class="form-input-group">
+				        		<i class="fa fa-key"></i>
+							<input name="robot_check" id="robot_check"
+				                                        class=""
+				                                        placeholder="Minä vuonna häät ovat? (robottitarkistus)"
+				                                        >
+				    		</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="row"><div class="col-md-12 alert-wrapper"></div></div>
+				    			<button id="rsvp-submit" class="btn-fill rsvp-btn">
+								Lähetä tiedot
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+                    
                 </form>
             </div>
         </div>
     </div>
+
 </section>
 
 <footer>

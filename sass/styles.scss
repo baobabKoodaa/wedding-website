@@ -841,7 +841,7 @@ RSVP form
       width: 100%;
       font-size: 13px;
     }
-    .temp {
+    .form-input-checkbox-container {
       width: 100%;
       height: 55px;
       margin: 0 auto 10px;
@@ -886,7 +886,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, i.fa-phone, .fa-key {
+      i.fa-user, i.fa-users, i.fa-envelope, i.fa-phone, i.fa-child, i.fa-clock-o, i.fa-list, .fa-key {
         font-size: 14px;
         position: absolute;
         top: 50%;
@@ -924,6 +924,31 @@ RSVP form
     }
   }
 }
+
+
+/* Checkbox styling */
+input[type=checkbox] {
+display:none;
+}
+ 
+input[type=checkbox] + label
+{
+background: #fff;
+height: 16px;
+width: 16px;
+display:inline-block;
+padding: 0 0 0 0px;
+outline: 1px solid #e8ca6f;
+}
+input[type=checkbox]:checked + label
+{
+background: #e8ca6f;
+height: 16px;
+width: 16px;
+display:inline-block;
+padding: 0 0 0 0px;
+}
+
 
 /* ==========================================================================
 Footer

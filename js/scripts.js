@@ -224,6 +224,27 @@ function showRSVPNoTree() {
     $("#rsvp-end").show();
 }
 
+function showAdult2Inputs() {
+    $("#rsvp-show-adult2").hide();
+    $("#rsvp-adult2-inputs").show();
+}
+
+function showChild1Inputs() {
+    $("#rsvp-show-child1").hide();
+    $("#rsvp-show-adult2").hide(); /* If they clicked showChild1, they must have skipped showAdult2 already. */
+    $("#rsvp-child1-inputs").show();
+}
+
+function showChild2Inputs() {
+    $("#rsvp-show-child2").hide();
+    $("#rsvp-child2-inputs").show();
+}
+
+function showChild3Inputs() {
+    $("#rsvp-show-child3").hide();
+    $("#rsvp-child3-inputs").show();
+}
+
 /********************** Extras **********************/
 
 // Google map
