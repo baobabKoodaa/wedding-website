@@ -219,6 +219,7 @@ function showRSVPYesTree() {
 function showRSVPNoTree() {
     $("#rsvp-root").hide();
     $("#rsvp-no").show();
+    $("#rsvp-wishes").hide();
     $("#rsvp-submit").text('En valitettavasti pääse paikalle');
     $("#rsvp-submit").css({ "background-color": '#F0F0F0' , "border-color": '#F0F0F0' , 'color':'rgba(28,54,83,0.6)'});
     $("#rsvp-end").show();
