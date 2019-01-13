@@ -186,17 +186,18 @@ $(document).ready(function () {
         $('.alert-wrapper').html(alert_markup('info', '<strong>Hetkinen...</strong> tallennamme tietoja.'));
 
         if ($('#robot_check').val() !== '2019') {
-            $('.alert-wrapper').html(alert_markup('danger', '<strong>Pahoittelut!</strong> Robottitarkistuksen mielestä et ole ihminen. Voit myös ilmoittautua puhelimella.'));
+            $('.alert-wrapper').html(alert_markup('danger', '<strong>Pahoittelut!</strong> Robottitarkistuksen mielestä et ole ihminen. Voit myös ilmoittautua puhelimella +358415076985 (Atte).'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbyMM2GAVSCMto2HKbSXrvTzJpXAah854OO-hmiQ/exec', data)
                 .done(function (data) {
                     console.log(data);
                     $('.alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');
+		    $('#rsvp-form')[0].reset();
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('.alert-wrapper').html(alert_markup('danger', '<strong>Pahus!</strong> Jokin meni mönkään. Tarkista toimiiko netti. Jos virhe toistuu, voit ilmoittautua puhelimella.'));
+                    $('.alert-wrapper').html(alert_markup('danger', '<strong>Pahus!</strong> Jokin meni mönkään. Tarkista toimiiko netti. Jos virhe toistuu, voit ilmoittautua puhelimella +358415076985 (Atte).'));
                 });
         }
     });
