@@ -2,6 +2,8 @@
 A beautiful, feature rich, device friendly wedding website.  
 See [https://attejamarianne.fi](https://attejamarianne.fi) for a demo, or clone this repo locally and run index.html.
 
+# TODO https://blog.ostermiller.org/git-remove-from-history
+
 # Highlights
 1. Slick and fully __responsive__ design.
 2. __RSVP feature__ which directly uploads data to a Google sheet.
