@@ -23,7 +23,7 @@ Majority of the design and functionality should be credited to him and his wife 
 Here is a list of changes:
 1. Changed Google Map embedding so that it's unlimited free usage now. It used to require API access, Google Cloud Platform account and an attached credit card.
 2. Changed RSVP form. It used to be simple 4 fields, but we needed more info. Now it's more like a decision tree where relevant fields are shown only to those who need them.
-3. Removed embedded video, uber button and social media trackers.
+3. Removed embedded video, uber button, dress code and social media trackers.
 4. Minor design changes, like splash screen, mobile friendly line breaks, 3x3 image fancybox, added tooltip, etc.
 5. Content changes (obviously)
 
