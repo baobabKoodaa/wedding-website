@@ -15,10 +15,6 @@
     <meta name="description" content="We would like to invite you to our big day.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Ram & Antara getting hitched">
-    <meta property="og:description" content="We would like to invite you to our big day.">
-    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
-    <meta property="og:type" content="website">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -46,7 +42,7 @@
         <header>
             <div class="header-content">
                 <div class="logo">
-			<a href="#"><img src="img/logo.png"></a>
+			<!--<a href="#"><img src="img/logo.png" id="nav-heart"></a>-->
 
 			<!-- These size 0 images are declared here to prioritize fetching them fast. This works at least in Chrome. -->
 			<img src="img/hero-placeholder.svg" width="0"/> 
@@ -156,7 +152,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="header">11.5.2019</h3>
+                <h3 class="header">Hääinfo</h3>
             </div>
         </div>
         <div class="row">
@@ -338,15 +334,14 @@
                     </button>
                     <div class="section-padding">
                         <h3>Kiitos!</h3>
-			
+				
+				<p>
+
 				<span id="rsvp-received-attending" style="display: none">
-		                	<p>Aivan mahtavaa että pääsette mukaan! Ilmoittautuminen on tallennettu onnistuneesti.</p>
-					<div id="add-to-cal">
+		                	Aivan mahtavaa että pääsette mukaan!<br>
 				</span>
 
-				<span id="rsvp-received-not-attending" style="display: none">
-					<p>Tiedot tallennettu onnistuneesti.</p>
-				</span>
+				Tiedot tallennettu onnistuneesti.</p>
 
                         </div>
                     </div>
@@ -371,7 +366,7 @@
 					Haluan ilmoittautua mukaan
 				</button>
 				<br><br>
-				<button class="btn-fill rsvp-btn" type="button" onclick="showRSVPNoTree()" style="background-color: #F0F0F0; border-color: #F0F0F0; color:rgba(28,54,83,0.6);">
+				<button class="btn-fill rsvp-btn rsvp-no-btn" type="button" onclick="showRSVPNoTree()">
 					Joudun kieltäytymään kutsusta
 				</button>
 				

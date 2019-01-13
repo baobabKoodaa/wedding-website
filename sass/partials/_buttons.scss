@@ -44,6 +44,16 @@
 	background-color: $accent-color-hover;
 	border-color: $accent-color-hover;
 }
+.rsvp-no-btn {
+	background-color: #F0F0F0;
+	border-color: #F0F0F0;
+	color: rgba(28,54,83,0.6);
+}
+.rsvp-no-btn:hover, .rsvp-no-btn:focus {
+	color: rgba(28,54,83,0.6);
+	background-color: #e6e6e6;
+	border-color: #e6e6e6;
+}
 .btn-small {
 	padding: 8px 30px;
 }

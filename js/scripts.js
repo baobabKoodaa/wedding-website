@@ -175,7 +175,6 @@ $(document).ready(function () {
             description: "Siunaustilaisuus Vanhalla Kirkolla 14:00, sen jälkeen hääjuhla Kulosaaren Casinolla."
         }
     });
-
     $('#add-to-cal').html(myCalendar);
 
 
@@ -221,7 +220,6 @@ function showRSVPNoTree() {
     $("#rsvp-root").hide();
     $("#rsvp-no").show();
     $("#rsvp-wishes-row").hide();
-    $("#rsvp-received-not-attending").show();
     $("#rsvp-submit").text('En valitettavasti pääse paikalle');
     $("#rsvp-submit").css({ "background-color": '#F0F0F0' , "border-color": '#F0F0F0' , 'color':'rgba(28,54,83,0.6)'});
     $("#rsvp-end").show();
