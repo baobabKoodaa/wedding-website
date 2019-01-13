@@ -386,8 +386,12 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
+                        <h3>Kiitos!</h3>
+                        <p>
+				<span id="rsvp-received-attending" style="display: none">Aivan mahtavaa että pääsette mukaan! Ilmoittautuminen on tallennettu onnistuneesti.</span>
+				<span id="rsvp-received-not-attending" style="display: none">Tiedot tallennettu onnistuneesti.</span>
+
+			</p>
                         <div id="add-to-cal"></div>
                     </div>
                 </div>
@@ -454,7 +458,7 @@
 				<div class="row">
 				        <div class="col-xs-12">
 				            <div class="form-input-group">
-				                <i class="fa fa-envelope"></i><input type="email" name="email1" class=""
+				                <i class="fa fa-envelope"></i><input name="email1" class=""
 				                                                     placeholder="Sähköposti (kuvia häiden jälkeen)"
 				                                                     >
 				            </div>
@@ -509,7 +513,7 @@
 					<div class="row">
 						<div class="col-xs-12">
 						    <div class="form-input-group">
-						        <i class="fa fa-envelope"></i><input type="email" name="email2" class=""
+						        <i class="fa fa-envelope"></i><input name="email2" class=""
 						                                             placeholder="Sähköposti (kuvia häiden jälkeen)"
 						                                             >
 						    </div>
@@ -648,7 +652,7 @@
 				        		<i class="fa fa-key"></i>
 							<input name="robot_check" id="robot_check"
 				                                        class=""
-				                                        placeholder="Minä vuonna häät ovat? (robottitarkistus)"
+				                                        placeholder="Minä vuonna häät ovat? (robottitarkistus)*"
 				                                        >
 				    		</div>
 					</div>

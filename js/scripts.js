@@ -184,12 +184,12 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('.alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('.alert-wrapper').html(alert_markup('info', '<strong>Hetkinen...</strong> tallennamme tietoja.'));
 
         if ($('#robot_check').val() !== '2019') {
             $('.alert-wrapper').html(alert_markup('danger', '<strong>Pahoittelut!</strong> Robottitarkistuksen mielestä et ole ihminen. Voit myös ilmoittautua puhelimella.'));
         } else {
-            $.post('https://', data)
+            $.post('https://script.google.com/macros/s/AKfycbyMM2GAVSCMto2HKbSXrvTzJpXAah854OO-hmiQ/exec', data)
                 .done(function (data) {
                     console.log(data);
                     $('.alert-wrapper').html('');
@@ -208,6 +208,7 @@ function showRSVPYesTree() {
     $("#rsvp-root").hide();
     $("#rsvp-yes").show();
     $("#rsvp-end").show();
+    $("#rsvp-received-attending").show();
     /* TODO: focus on next field */
 
     /* Scroll.
@@ -220,6 +221,7 @@ function showRSVPNoTree() {
     $("#rsvp-root").hide();
     $("#rsvp-no").show();
     $("#rsvp-wishes-row").hide();
+    $("#rsvp-received-not-attending").show();
     $("#rsvp-submit").text('En valitettavasti pääse paikalle');
     $("#rsvp-submit").css({ "background-color": '#F0F0F0' , "border-color": '#F0F0F0' , 'color':'rgba(28,54,83,0.6)'});
     $("#rsvp-end").show();
