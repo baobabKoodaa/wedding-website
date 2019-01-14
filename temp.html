@@ -1,6 +1,7 @@
 <html>
 <body>
 
+
 <form action="/action_page.php" method="get">
   <input name="text1" value="Some text"><br>
   <input name="text2" value="More text"><br>
@@ -12,5 +13,14 @@
   <input type="submit" value="Submit">
 </form>
 
+<script>
+	var phone1 = document.querySelector('[name=text3]');
+	var whatsapp1 = document.querySelector('[name=vehicle]');	
+	phone1.addEventListener('change', goToWA1);
+	function goToWA1(e) {
+		console.log('hello');
+		whatsapp1.focus();
+	}
+</script>
+
 </body>
-</html>

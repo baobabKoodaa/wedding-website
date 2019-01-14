@@ -1,0 +1,314 @@
+<html>
+<head>		
+	<meta charset="utf-8">
+	<title>Atte ja Marianne 2019</title>
+	<meta name="description" content="Tervetuloa juhlistamaan häitämme 11.5.2019">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+	<link rel="stylesheet" href="css/queries.css">
+	<link rel="stylesheet" href="css/animate.css/animate.min.css">
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/flying-birds.css">
+
+</head>
+<body>
+
+<section class="rsvp text-center" id="rsvp">
+
+	<!-- Modal that pops up after succesfully sending data. -->
+
+	<div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+					</button>
+					<div class="section-padding">
+						<h3>Kiitos!</h3>
+				
+						<p>
+
+						<span id="rsvp-received-attending" style="display: none">
+						Aivan mahtavaa että pääsette mukaan!<br>
+						</span>
+
+						Tiedot tallennettu onnistuneesti.
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h3>Ilmoittautuminen</h3>
+				<p>Vastaattehan kutsuun viimeistään XX.YY.<br class="desktop-break">Kutsu on tarkoitettu vain kirjeessä osoitetuille henkilöille.</p>
+
+				<!-- RSVP form -->
+
+				<form id="rsvp-form" class="rsvp-form" action="" method="POST" onkeypress="return (event.keyCode != 13);">
+
+					<!-- Initially only yes/no buttons are visible. -->
+
+					<div id="rsvp-root">
+						<button class="btn-fill rsvp-btn" type="button" onclick="showRSVPYesTree()">
+							Haluan ilmoittautua mukaan
+						</button>
+						<br><br>
+
+						<button class="btn-fill rsvp-btn rsvp-no-btn" type="button" onclick="showRSVPNoTree()">
+							Joudun kieltäytymään kutsusta
+						</button>
+				
+					</div>
+
+					<!-- The "no" decision tree is simple. -->
+
+					<div id="rsvp-no" class="rsvp-no" style="display: none">
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="form-input-group">
+									<i class="fa fa-user"></i>
+									<input name="decline-name" class="" placeholder="Nimi*">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- The "yes" decision tree is more complex. -->
+
+					<div id="rsvp-yes" class="rsvp-yes" style="display: none">
+
+						<!-- Forms for 1st adult. -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="form-input-group">
+									<i class="fa fa-user"></i><input name="name1" class="" placeholder="Nimi*">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="form-input-group">
+									<i class="fa fa-envelope"></i><input name="email1" class="" placeholder="Sähköposti (kuvia häiden jälkeen)">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+									<div class="form-input-group">
+										<i class="fa fa-phone"></i><input name="phone1" class="" placeholder="Puhelinnumero">
+									</div>
+							</div>
+						</div>
+						<div class="row" id="test88">
+							<div class="col-xs-12">
+								<div class="form-input-checkbox-container">
+									<input name="whatsapp1" type="checkbox" value="whatsapp1" id="whatsapp1" style="">
+									<label class="form-input-checkbox" for="whatsapp1">
+										<span class="checkmark"></span>
+										<span style="width: 80vw; position: absolute; padding-left: 48px; font-weight: 300 !important; color: rgba(28,54,83,0.6);">
+											Saa liittää hääpäivänä WhatsApp-ryhmään
+										</span>
+									</label>	
+								</div>
+							</div>
+						</div>
+						<div class="row section-border" style="margin-bottom: 30px">
+						</div>
+
+						<!-- Button to show forms for 2nd adult. -->
+
+						<div id="rsvp-show-adult2">
+							<button class="btn-fill rsvp-btn" type="button" onclick="showAdult2Inputs()" style="width: 50%; margin-bottom: 30px">
+								Lisää toinen aikuinen
+							</button>
+							<div class="row section-border" style="margin-bottom: 30px"></div>
+						</div>
+
+						<!-- Forms for 2nd adult. -->
+
+						<div id="rsvp-adult2-inputs" style="display: none">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+										<i class="fa fa-user"></i><input name="name2" class="" placeholder="Nimi*">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+										<i class="fa fa-envelope"></i><input name="email2" class="" placeholder="Sähköposti (kuvia häiden jälkeen)">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+										<i class="fa fa-phone"></i><input name="phone2" class="" placeholder="Puhelinnumero">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-checkbox-container">
+										<input name="whatsapp2" type="checkbox" value="whatsapp2" id="whatsapp2" style="">
+										<label class="form-input-checkbox" for="whatsapp2">
+											<span class="checkmark"></span>
+											<span style="width: 80vw; position: absolute; padding-left: 48px; font-weight: 300 !important; color: rgba(28,54,83,0.6);">
+												Saa liittää hääpäivänä WhatsApp-ryhmään
+											</span>
+										</label>	
+									</div>
+								</div>
+							</div>
+							<div class="row section-border" style="margin-bottom: 30px"></div>
+						</div>
+
+						<!-- Button to show forms for 1st child. -->
+
+						<div id="rsvp-show-child1">
+							<button class="btn-fill rsvp-btn" type="button" onclick="showChild1Inputs()" style="width: 50%; margin-bottom: 30px">
+								Lisää lapsi
+							</button>
+							<div class="row section-border" style="margin-bottom: 30px"></div>
+						</div>
+
+						<!-- Forms for 1st child. -->
+
+						<div id="rsvp-child1-inputs" style="display: none">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+										<i class="fa fa-child"></i><input name="child-name1" class="" placeholder="Nimi*">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+									<i class="fa fa-clock-o"></i><input name="child-age1" class="" type="number" placeholder="Ikä*">
+									</div>
+								</div>
+							</div>
+							<div class="row section-border" style="margin-bottom: 30px; margin-top: 20px;"></div>
+							<div id="rsvp-show-child2">
+								<button class="btn-fill rsvp-btn" type="button" onclick="showChild2Inputs()" style="width: 50%; margin-bottom: 30px">
+									Lisää toinen lapsi
+								</button>
+								<div class="row section-border" style="margin-bottom: 30px"></div>
+							</div>
+						</div>
+
+						<!-- Forms for 2nd child. -->				
+
+						<div id="rsvp-child2-inputs" style="display: none">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+										<i class="fa fa-child"></i><input name="child-name2" class="" placeholder="Nimi*">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+									<i class="fa fa-clock-o"></i><input name="child-age2" class="" type="number" placeholder="Ikä*">
+									</div>
+								</div>
+							</div>
+							<div class="row section-border" style="margin-bottom: 30px; margin-top: 20px;"></div>
+							<div id="rsvp-show-child3">
+								<button class="btn-fill rsvp-btn" type="button" onclick="showChild3Inputs()" style="width: 50%; margin-bottom: 30px">
+									Lisää kolmas lapsi
+								</button>
+								<div class="row section-border" style="margin-bottom: 30px"></div>
+							</div>
+						</div>
+
+						<!-- Forms for 3rd child. -->	
+
+						<div id="rsvp-child3-inputs" style="display: none">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+										<i class="fa fa-child"></i><input name="child-name3" class="" placeholder="Nimi*">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-input-group">
+									<i class="fa fa-clock-o"></i><input name="child-age3" class="" type="number" placeholder="Ikä*">
+									</div>
+								</div>
+							</div>
+							<div class="row section-border" style="margin-bottom: 30px; margin-top: 20px;"></div>
+						</div>	
+					</div>
+			
+					<div id="rsvp-end" style="display: none">
+
+						<!-- Special wishes ("yes" tree only) -->	
+
+						<div class="row" id="rsvp-wishes-row">
+							<div class="col-xs-12">
+								<div class="form-input-group">
+									<i class="fa fa-list"></i>
+									<input name="wishes" id="rsvp-wishes" class="" placeholder="Toiveet (erityisruokavalio, syöttötuoli, tms.)">
+								</div>
+							</div>
+						</div>
+
+						<!-- Verify human (both "yes" and "no" tree) -->	
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="form-input-group">
+									<i class="fa fa-key"></i>
+									<input name="robot_check" id="robot_check" class="" placeholder="Minä vuonna häät ovat? (robottitarkistus)*">
+								</div>
+							</div>
+						</div>
+
+						<!-- Button to send form. -->	
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="row"><div class="col-md-12 alert-wrapper"></div></div>
+									<button id="rsvp-submit" class="btn-fill rsvp-btn">
+										Lähetä tiedot
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="js/vendor/ouical.js"></script>
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

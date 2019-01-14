@@ -179,6 +179,9 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
+
+
+
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
@@ -209,12 +212,6 @@ function showRSVPYesTree() {
     $("#rsvp-yes").show();
     $("#rsvp-end").show();
     $("#rsvp-received-attending").show();
-    /* TODO: focus on next field */
-
-    /* Scroll.
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $("#rsvp-yes").offset().top
-    }, 2000); */
 }
 
 function showRSVPNoTree() {
