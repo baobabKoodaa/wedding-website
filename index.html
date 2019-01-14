@@ -427,11 +427,8 @@
 
 				<!-- RSVP form -->
 
-				<form id="rsvp-form" class="rsvp-form" action="" method="POST" onkeypress="return (event.keyCode != 13);">
-											<!--	We want to prevent enter on mobile from focusing on next text field in RSVP form,
-												because it skips checkbox fields (and we couldn't get focus on a custom
-												checkbox field). This is why form fields have tabindex=-1. This onkeypress condition
-												is used to prevent sending the form prematurely by pressing enter. -->
+				<form id="rsvp-form" class="rsvp-form" action="" method="POST" onkeypress="return handleEnter(event.keyCode);"> <!-- Prevent premature sending of form by pressing enter ->
+
 
 					<!-- Initially only yes/no buttons are visible. -->
 
@@ -471,6 +468,7 @@
 							<div class="col-xs-12">
 								<div class="form-input-group">
 									<i class="fa fa-user"></i><input name="name1" class="" placeholder="Nimi*" tabindex="-1">
+									<!-- tabIndex=-1 as a workaround to prevent mobile browsers from skipping custom checkboxes and custom buttons -->
 								</div>
 							</div>
 						</div>

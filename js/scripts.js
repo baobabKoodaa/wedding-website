@@ -180,8 +180,6 @@ $(document).ready(function () {
 
     /********************** RSVP **********************/
 
-
-
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
@@ -206,6 +204,14 @@ $(document).ready(function () {
     });
 
 });
+
+function handleEnter(eventCode) {
+    if (eventCode == 13) {
+        $('input').blur(); /* Hide keyboard on mobile to help user select the next field (allowing autofocus didn't work with custom elements). */
+        return false; /* Prevent submitting the form prematurely. */
+    }
+    return true;
+}
 
 function showRSVPYesTree() {
     $("#rsvp-root").hide();
