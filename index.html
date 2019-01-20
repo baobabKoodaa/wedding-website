@@ -28,8 +28,13 @@
 	<link rel="stylesheet" href="css/queries.css">
 	<link rel="stylesheet" href="css/animate.css/animate.min.css">
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<script type="text/javascript">
+		function imageLoaded(img){
+			img.classList.add('image-loaded');
+			img.classList.remove('image-loading');
+		};
+	</script>
 	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
 </head>
 <body id="top">
 <!--[if lt IE 8]>
@@ -48,7 +53,7 @@
 
 					<!-- These size 0 images are declared here to prioritize fetching them fast. This works at least in Chrome. -->
 					<img src="img/hero-placeholder.svg" width="0"/> 
-					<img src="img/hero-min.jpg" width="0"/>
+					<img src="img/hero-min.jpg" onload="imageLoaded(document.getElementById('bg-replacer'))" width="0"/>
 
 				</div>
 				<div class="header-nav">
@@ -78,7 +83,7 @@
 	<section>
 		<!-- Background image and a small vector graphics placeholder for it. -->
 		<div class="bgplaceholder">
-			<div class="replace-placeholder" style="
+			<div id="bg-replacer" class="replace-placeholder image-loading" style="
 			height: 100vh;
 			background: url('img/hero-min.jpg') center center;
 			-webkit-background-size: cover;
@@ -721,8 +726,6 @@
 		</div>
 	</div>
 </footer>
-
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
