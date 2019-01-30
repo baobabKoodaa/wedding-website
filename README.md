@@ -3,11 +3,10 @@ A beautiful, feature rich, device friendly wedding website.
 See [https://attejamarianne.fi](https://attejamarianne.fi) for a demo, or clone this repo locally and run index.html.
 
 # Highlights
-1. Slick and fully __responsive__ design.
-2. __RSVP feature__ which directly uploads data to a Google sheet.
-3. __Receive email alerts__ when someone RSVPs.
-4. __Add to Calendar__ feature which supports four different calendars.
-5. Start and run the website __completely free__. No hosting, backend server, or database required as you can
+- Slick and fully __responsive__ design.
+- __RSVP feature__ which directly uploads data to a Google sheet and emails you.
+- __Add to Calendar__ feature which supports four different calendars.
+- Start and run the website __completely free__. No hosting, backend server, or database required as you can
 use [GitHub pages](https://pages.github.com/) to host and Google sheets (with the help of Google scripts) to store rsvp data.
 
 # Feel free to fork this
